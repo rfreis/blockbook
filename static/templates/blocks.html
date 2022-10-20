@@ -1,27 +1,28 @@
 {{define "specific"}}{{$blocks := .Blocks}}{{$data := .}}
-<h1>Blocks <small class="text-muted">by date</small>
-</h1>
+<div class="row">
+    <div class="col-sm-6"><h1>Blocks</h1></div>
+    <div class="col-sm-6">{{if $blocks.Blocks}}<nav>{{template "paging" $data }}</nav>{{end}}</div>
+</row>
 {{if $blocks.Blocks -}}
-<nav>{{template "paging" $data }}</nav>
-<div class="data-div">
-    <table class="table table-striped data-table table-hover">
+<div>
+    <table class="table table-hover data-table">
         <thead>
             <tr>
                 <th style="width: 10%;">Height</th>
-                <th style="width: 48%;">Hash</th>
+                <th style="width: 50%;">Hash</th>
                 <th>Timestamp</span></th>
-                <th class="text-right" style="width: 10%;">Transactions</th>
-                <th class="text-right" style="width: 10%;">Size</th>
+                <th class="text-end" style="width: 10%;">Transactions</th>
+                <th class="text-end" style="width: 12%;">Size</th>
             </tr>
         </thead>
         <tbody>
             {{- range $b := $blocks.Blocks -}}
             <tr>
-                <td><a href="/block/{{$b.Height}}">{{$b.Height}}</a></td>
+                <td><a href="/block/{{$b.Height}}">{{formatUint32 $b.Height}}</a></td>
                 <td class="ellipsis">{{$b.Hash}}</td>
                 <td>{{formatUnixTime $b.Time}}</td>
-                <td class="text-right">{{$b.Txs}}</td>
-                <td class="text-right">{{$b.Size}}</td>
+                <td class="text-end">{{formatUint32 $b.Txs}}</td>
+                <td class="text-end">{{formatUint32 $b.Size}}</td>
             </tr>
             {{- end -}}
         </tbody>

@@ -1,5 +1,5 @@
 {{define "specific"}}{{$cs := .CoinShortcut}}{{$b := .Block}}{{$data := . -}}
-<h1>Block {{$b.Height}}</h1>
+<h1>Block {{formatUint32 $b.Height}}</h1>
 <div class="alert alert-data ellipsis">
     <span class="data">{{$b.Hash}}</span>
 </div>

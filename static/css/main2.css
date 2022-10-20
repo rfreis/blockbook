@@ -1,0 +1,196 @@
+@import "TTHoves/TTHoves.css";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    font-family: "TT Hoves", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, #F6F6F6 300px, #E5E5E5 0), #E5E5E5;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: #00854D;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00854D;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .h1,
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: white;
+    border: 0;
+    z-index: 10;
+}
+
+#header .form-control-lg {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.bb-group {
+    border: 0.6rem solid #F6F6F6;
+    background-color: #F6F6F6;
+    border-radius: 0.5rem;
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.bb-group>.btn {
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-padding-y: 0.22rem;
+    --bs-btn-border-radius: 0.5rem;
+    --bs-btn-border-width: 0;
+    color: #545454;
+}
+
+.bb-group>.btn-check:checked+.btn {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    padding: 112px 0 75px 0;
+    margin: 0 auto -56px;
+}
+
+#footer {
+    background-color: black;
+    color: #757575;
+    height: 56px;
+    overflow: hidden;
+}
+
+.navbar-form {
+    width: 60%;
+}
+
+.navbar-form .btn {
+    margin-left: -50px;
+    padding-right: 22px;
+}
+
+.navbar-form ::placeholder {
+    color: #E2E2E2;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.data-table {
+    table-layout: fixed;
+    overflow-wrap: break-word;
+    margin-left: 8px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: calc(100% - 16px);
+}
+
+.data-table thead {
+    padding-bottom: 20px;
+}
+
+.table.data-table>:not(caption)>*>* {
+    padding: 0.8rem 0.8rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.table.data-table>thead>*>* {
+    padding-bottom: 1.5rem;
+}
+
+.table.data-table>*>*:last-child>* {
+    border-bottom: none;
+}
+
+.data-table thead,
+.data-table thead tr,
+.data-table thead th {
+    color: #757575;
+    border: none;
+    font-weight: normal;
+}
+
+.data-table tbody {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 8px white;
+}
+
+.data-table h3,
+.data-table h6 {
+    margin-bottom: 0;
+}
+
+.data-table h3 {
+    color: black;
+}
+
+.info-table tbody {
+    display: block;
+}
+
+.info-table td {
+    font-weight: bold;
+}
+
+.info-table tr>td:first-child {
+    font-weight: normal;
+    color: #757575;
+}
+
+.ns:before {
+    content: " ";
+}
